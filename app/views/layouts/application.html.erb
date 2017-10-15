@@ -2,27 +2,45 @@
 <html>
   <head>
     <title>Nameofapp</title>
-    <%= csrf_meta_tags %>
+    
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<%= csrf_meta_tags %>
+</head>
 
-  	<nav>
-  		<ul>
-  			<li>Home</li>
-  			<li>About</li>
-  			<li>Contact</li>
-  		</ul>
-  	</nav>
+<body>
 
+	<nav class="navbar navbar-default" id="navbar">
+  	<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#"></a>
+    	</div><!--end navbar-header-->
+    	<ul class="nav navbar-nav">
+      	<li class="active"><a href="#">Home</a></li>
+      	<li><a href="#">Contact</a></li>
+      	<li><a href="#">About</a></li>
+      	<li><a href="#">FAQ</a></li>
+    	</ul>
+  	</div>
+	</nav>
 
     <%= yield %>
 
+  	
+    	
     <footer>
-    	@copy; Bike Berlin
+      <div class="container">
+        <p>&copy;Berlin Bikes</p>
+      </div>
     </footer>
+		
+
   </body>
 </html>

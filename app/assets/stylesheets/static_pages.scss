@@ -1,3 +1,87 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+h1, h2{
+	font-family: Futura, Helvetica,Ariel, sans-serif;
+	padding-top: 60px;
+}
+h2 {
+	font-family: Futura, Helvetica,Ariel, sans-serif;
+}
+
+p {
+	font-family: Futura, Helvetica,Ariel, sans-serif;
+}
+
+li {
+	font-family: Helvetica,Ariel, sans-serif;
+}
+
+body {
+  background-color: #E8E5DA;
+}
+
+/* Contact Page */
+.contact h1 {
+	padding-top: 60px;
+}
+
+/* NAV-BAR */
+.navbar li {
+	font-family: Georgia, Cambria, Serif;
+}
+
+.navbar ul li { 
+	display: inline-block;
+	font-size: 1em;
+	padding-top: 15px;
+
+}
+
+.navbar ul {
+	float: right;
+}
+
+#navbar {
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	min-height: 50px;
+	z-index: 1;
+	margin-bottom: 30px;
+}
+
+.navbar-brand{
+	padding: 27px;
+}
+
+.navbar ul li a {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	padding: 20px 20px 20px;
+	transition: color 600ms;
+	-webkit-transition: color 600ms; /*--Safari */
+}
+
+.navbar a:hover {
+	color: #ff0;
+}
+
+/*footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: gray;
+  text-align: center;
+}
+
+
+
