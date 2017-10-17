@@ -74,7 +74,7 @@ body {
 
 /*footer*/
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -83,5 +83,7 @@ footer {
   text-align: center;
 }
 
-
+.img-responsive {
+	margin-bottom: 40px;
+}
 
