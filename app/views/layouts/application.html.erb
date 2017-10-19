@@ -23,9 +23,9 @@
       	<a class="navbar-brand" href="#"></a>
     	</div><!--end navbar-header-->
     	<ul class="nav navbar-nav">
-      	<li class="active"><a href="#">Home</a></li>
-      	<li><a href="#">Contact</a></li>
-      	<li><a href="#">About</a></li>
+      	<li class="<%= 'active' if params[:controller] == 'yourdefaultcontroller' %>"><a href="/">Home</a></li>
+        <li class="<%= 'active' if params[:controller] == 'contact' %>"><a href="/products">Contact</a></li>
+        <li class="<%= 'active' if params[:controller] == 'about' %>"><a href="/categories">About Us</a></li>
       	<li><a href="#">FAQ</a></li>
     	</ul>
   	</div>
