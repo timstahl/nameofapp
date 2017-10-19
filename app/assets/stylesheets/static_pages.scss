@@ -6,7 +6,8 @@
 
 h1, h2{
 	font-family: Futura, Helvetica,Ariel, sans-serif;
-	padding-top: 60px;
+	padding-top: 70px;
+	text-align: center;
 }
 h2 {
 	font-family: Futura, Helvetica,Ariel, sans-serif;
@@ -14,10 +15,12 @@ h2 {
 
 p {
 	font-family: Futura, Helvetica,Ariel, sans-serif;
+	
 }
 
 li {
 	font-family: Helvetica,Ariel, sans-serif;
+	text-align: center;
 }
 
 body {
@@ -27,6 +30,12 @@ body {
 /* Contact Page */
 .contact h1 {
 	padding-top: 60px;
+	text-align: center;
+}
+.center{
+    width:300px;
+    margin:0 auto;
+    text-align:left;
 }
 
 /* NAV-BAR */
