@@ -2,29 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table, th, td {
-   border: 1px solid black;
-   padding: 10px;
+
+.equal {  
+    display: -webkit-flex;
+    display: flex;
 }
 
-
-table {
-	margin-right: 30px;
-   margin-left: 30px;
-}
-
-tr:hover {background-color: #f5f5f5}
-
-tr:nth-child(even) {background-color: #f2f2f2}
-
-
-
-a {
-	margin-left: 50px;
-	margin-right:50px;
-}
-
-form {
-    width: 300px;
-    margin: 0 auto;
+@media only screen and (max-width: 600px) {
+    .col { 
+        display: block;
+        width: 100%;
+    }
 }
