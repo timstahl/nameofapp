@@ -7,8 +7,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/contact', to: 'static_pages#contact', as: 'contact'
 
-  #root 'static_pages#landing_page'
-
+  #root 'static_pages#landing_page' #old root page
 
   get '/home', to: 'static_pages#landing_page', as: 'home'
 
