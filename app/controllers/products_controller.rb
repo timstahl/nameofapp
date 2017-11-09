@@ -21,6 +21,15 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  def index
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end
+  end
+
   # POST /products
   # POST /products.json
   def create
