@@ -28,14 +28,18 @@ body {
   padding-bottom: 100px;
 }
 
+
+
 /*forms*/
 .field,
 .actions {
 	margin-left: 30px;
 }
 
-.search {
-	float: right;
+.text_field,
+.submit {
+	padding-top: 15px;
+	float: left;
 }
 
 /* Contact Page */
@@ -69,15 +73,12 @@ body {
 	background-color: black;
 	position: fixed;
 	width: 100%;
-	top: 0px;
+	top: 10px;
 	min-height: 50px;
 	z-index: 1;
 	margin-bottom: 30px;
 }
 
-.navbar-brand{
-	padding: 27px;
-}
 
 .navbar ul li a {
 	color: white;

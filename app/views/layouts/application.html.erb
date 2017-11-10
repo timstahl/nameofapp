@@ -27,12 +27,14 @@
         <li><%= link_to "Contact", contact_path %> </li>
         <li><%= link_to "About", about_path %> </li>
     	</ul>
-      
-      <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-        <%= form.label :q, 'Search for:' %>
+        
+        <!--search form in navbar-->
+        <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+        <div class="text_field">
         <%= form.text_field :q, id: 'q', value: params[:q] %>
         <%= form.submit 'Search' %>
-      <% end %>
+        </div>
+        <% end %>
   	
     </div>
 	</nav>
