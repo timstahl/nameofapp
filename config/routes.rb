@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#index', as: 'intro'
 
-
   get 'static_pages/contact', to: 'static_pages#contact', as: 'contact'
 
   #root 'static_pages#landing_page' #old root page
@@ -15,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/index', to: 'static_pages#landing_page', as: 'landing_page'
 
-  
+  post 'static_pages/thank_you'
 
 
   resources :orders, only: [:index, :show, :create, :destroy]
