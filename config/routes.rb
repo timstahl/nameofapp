@@ -14,8 +14,6 @@ Rails.application.routes.draw do
 
   get 'static_pages/index', to: 'static_pages#landing_page', as: 'landing_page'
 
-  get 'static_pages/contact', to: 'static_pages#thank_you', as: 'thank_you'
-
   post 'static_pages/thank_you'
 
 
