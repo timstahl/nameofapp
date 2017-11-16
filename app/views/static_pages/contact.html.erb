@@ -3,9 +3,9 @@
 	<div class="center">
   <p>
     <ul>
-  		<li>Phone: 	(919)885-BIKE</li>
+  		<li>Phone: (919)885-BIKE</li>
   		<br>
-  		<li>Email:  sorebutts@babikes.com</li>
+  		<li>Email: sorebutts@babikes.com</li>
   		<br>
   		<li>Address: 19320 52nd Ave, New York</li>
   	</ul>
@@ -17,16 +17,16 @@
 
 
 
-<%= flash[:notice] %>
 
-<%= form_with(url: "/static_pages/thank_you") do |form| %>
+
+<%= form_with(url: "/static_pages/thank_you", local: true) do |form| %>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-4">
       <div class="form-group">
         <%= form.label :name %>
         <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
       </div>        
-      <div class="form-group">
+      <div class="form-group" id="form">
         <%= form.label :email, "Email Address" %>
         <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
       </div>
@@ -36,6 +36,8 @@
       </div>        
     </div>
   </div>
-  <%= form.submit "Send" %>   
+  <div class="submitbutton">
+  <%= form.submit "Send" %> 
+  </div>
 <% end %>
 

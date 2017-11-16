@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  resources :users
   resources :products
 
-  root 'static_pages#index', as: 'intro'
+  root 'static_pages#landing_page', as: 'intro'
 
   get 'static_pages/contact', to: 'static_pages#contact', as: 'contact'
 

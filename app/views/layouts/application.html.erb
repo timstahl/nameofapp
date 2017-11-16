@@ -15,11 +15,13 @@
 </head>
 
 <body>
+ 
+
 
 	<nav class="navbar navbar-default" id="navbar">
   	<div class="container-fluid">
     	<div class="navbar-header">
-      	<a class="navbar-brand" <%= link_to "Big Apple Bikes", landing_page_path %> </a>
+      	<a class="navbar-brand" <%= link_to "Big Apple Bikes", intro_path %> </a>
     	</div><!--end navbar-header-->
     	<ul class="nav navbar-nav">
       	<li><%= link_to "Home", intro_path %> </li></li>
@@ -27,6 +29,16 @@
         <li><%= link_to "Contact", contact_path %> </li>
         <li><%= link_to "About", about_path %> </li>
     	</ul>
+
+      <ul class="nav pull-right">
+        <li>
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>  
+        </li>
+      </ul>
         
         <!--search form in navbar-->
         <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
@@ -41,7 +53,8 @@
 
     <%= yield %>
 
-  	
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     	
     <footer>
       <div class="container">
