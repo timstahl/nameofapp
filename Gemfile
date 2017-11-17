@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 #Adding Authentication
+gem 'cancancan', '~> 1.10'
+#Adding Authorization
 
 
 group :production do
