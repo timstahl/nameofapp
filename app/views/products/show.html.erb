@@ -25,5 +25,8 @@
 	<%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>
+<%= link_to 'Back', products_path, class: "btn btn-default" %>
+
+<%= @product.highest_rating_comment %>
+<%= @product.lowest_rating_comment %>
