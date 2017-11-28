@@ -15,4 +15,11 @@ has_many :orders
 		comments.rating_asc.first
 	end	
 
+	def comments
+	end
+	
+	def average_rating
+  	comments.average(:rating).to_f
+	end
+
 end
