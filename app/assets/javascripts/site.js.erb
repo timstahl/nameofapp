@@ -1,10 +1,11 @@
-var refreshRating = function(){
+function refreshRating() {
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
     starOn: '<%= asset_path 'star-on.png' %>',
     scoreName: 'comment[rating]'
   });
+
   $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -17,6 +18,9 @@ var refreshRating = function(){
 }
 
 $(document).on('turbolinks:load', function(){
+  
   refreshRating();
-  $('.img-zoom').elevateZoom();
+  
+  $(".img-zoom").elevateZoom();
+  
 });

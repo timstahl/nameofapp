@@ -1,18 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<% cache @product do %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class="container">
+  <div class="row">
+  
+  <p data-product-id= "<%= @product.id %>">
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+
+<% end %>
 
 <p>
   <strong>Image url:</strong>
-  <%= @product.image_url %>
+  <% if @product.image_url.present? %>
+  <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
+  <% end %>
 </p>
 
 <p>
@@ -21,31 +30,26 @@
 </p>
 
 <p>
-	<strong>Price:</strong>
-	<%= @product.price %>
+  <strong>Price:</strong>
+  <%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>
-<%= link_to 'Back', products_path, class: "btn btn-default" %>
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
-<%= @product.highest_rating_comment %>
-<%= @product.lowest_rating_comment %>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
 
 <%= render 'new_comment' %>
+
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
 <%= render 'comments' %>
 
- <p>
-    <%= f.label :body, "Comments" %><br>
-    <%= f.text_area :body %>
-  </p>
+  </div><!--row end-->
+</div><!--container end-->
 
-  <p>
-    <div class="rating"></div>
-  </p>
 
-  <p>
-    <%= f.submit "Submit" %>
-  </p>
-
-  <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-
+<%= @product.comments.order(rating: :desc).first %>
+<%= @product.highest_rating_comment %>
