@@ -31,7 +31,8 @@ gem 'devise'
 #Adding Authentication
 gem 'cancancan', '~> 1.10'
 #Adding Authorization
-
+gem 'will_paginate', '~> 3.1.0'
+#Adding paginate feature
 
 group :production do
   gem 'pg'

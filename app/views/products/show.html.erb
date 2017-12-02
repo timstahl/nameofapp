@@ -47,9 +47,13 @@
 
 <%= render 'comments' %>
 
+
+
+<div class="apple_pagination">
+    <div class="page_info">
+      <%= page_entries_info @comments %>
+    </div>
+    <%= will_paginate @comments, :container => false %>
+  </div>
   </div><!--row end-->
 </div><!--container end-->
-
-
-<%= @product.comments.order(rating: :desc).first %>
-<%= @product.highest_rating_comment %>
