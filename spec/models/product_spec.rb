@@ -29,4 +29,10 @@ require 'rails_helper'
 
     	end
 
+    	it "Testing Validations Missing The Description" do
+
+    		expect(Product.new(name: "race bike"))
+
+    	end
+
 end	
