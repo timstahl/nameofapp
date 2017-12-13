@@ -33,6 +33,9 @@ gem 'cancancan', '~> 1.10'
 #Adding Authorization
 gem 'will_paginate', '~> 3.1.0'
 #Adding paginate feature
+gem 'rails-controller-testing'
+# provides the assigns and assert_template
+
 
 group :production do
   gem 'pg'

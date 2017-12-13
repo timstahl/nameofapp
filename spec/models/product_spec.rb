@@ -2,7 +2,7 @@ require 'rails_helper'
 
 	describe Product do 
 	
-		context "when the product has comments" do
+		context "When the product has comments" do
 		
 			let(:product) { Product.create!(name: "race bike") }	
 			let(:user) {User.create!(first_name: "Smoky", last_name: "Bear", email: "mikesmith@gmail.com", password: "password") }
@@ -14,9 +14,9 @@ require 'rails_helper'
    			product.comments.create!(rating: 5, user: user, body: "Great bike!")
    		end
 
-			it "Returns The Average Rating Of All Comments" do
+			it "return the average rating of all comments" do
 
-  			expect (product.average_rating).to eq 3 
+  			expect (product.average_rating).to equal (3) 
   		
   		end
 
