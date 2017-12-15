@@ -4,8 +4,8 @@ require 'rails_helper'
 	
 		context "When the product has comments" do
 		
-			let(:product) { Product.create!(name: "race bike") }	
-			let(:user) {User.create!(first_name: "Smoky", last_name: "Bear", email: "mikesmith@gmail.com", password: "password") }
+			@product = FactoryBot.create(:product)
+			
 
 
 	 		before do
