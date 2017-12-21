@@ -35,6 +35,8 @@ gem 'will_paginate', '~> 3.1.0'
 #Adding paginate feature
 gem 'rails-controller-testing'
 # provides the assigns and assert_template
+gem 'stripe'
+# cc processing
 
 
 
