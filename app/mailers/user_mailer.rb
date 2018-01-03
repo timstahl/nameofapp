@@ -21,4 +21,12 @@ class UserMailer < ApplicationMailer
         subject: "Welcome to #{@appname}!")
   end
 
+  def order_placed(user, product)
+      @user = user
+      @product = product
+      mail(:from => 'timothystahl@gmail.com',
+            :to => user.email,
+            :subject => "Your order of the #{product.name} bike has been placed.")
+    end
+
 end
