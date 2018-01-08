@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+
   # GET /products
   # GET /products.json
   def index
@@ -24,6 +25,7 @@ class ProductsController < ApplicationController
   end
 
   def index
+    byebug
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)

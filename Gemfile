@@ -40,6 +40,7 @@ gem 'stripe'
 
 
 
+
 group :production do
   gem 'pg'
 end
