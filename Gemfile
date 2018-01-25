@@ -37,6 +37,8 @@ gem 'rails-controller-testing'
 # provides the assigns and assert_template
 gem 'stripe'
 # cc processing
+gem 'dalli'
+#Memcachier gem
 
 
 
