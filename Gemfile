@@ -39,6 +39,8 @@ gem 'stripe'
 # cc processing
 gem 'dalli'
 #Memcachier gem
+gem 'redis-rails'
+#RedisRails gem
 
 
 
