@@ -66,7 +66,12 @@
       <span class="badge">
        <%= @product.views %>
       </span>
+
+      <span id="latest_reviewer" class="badge">
+       <%= @product.get_latest_reviewer %>
+      </span>
     </h6>  
+
 
 
   </div><!--row end-->
