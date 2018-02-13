@@ -115,5 +115,8 @@ config.cache_store = :dalli_store,
     enable_starttls_auto: true
     }
 
+    config.web_socket_server_url = "wss://bikes-berlin-rails-demo.herokuapp.com/cable"
+    config.action_cable.allowed_request_origins = ['bikes-berlin-rails-demo.herokuapp.com', 'bikes-berlin-rails-demo.herokuapp.com']
+
 
 end
