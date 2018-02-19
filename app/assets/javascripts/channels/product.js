@@ -1,4 +1,4 @@
-App.product = App.cable.subscriptions.create({channel: "ProductChannel"}, {
+App.product = App.cable.subscriptions.create("ProductChannel", {
   connected: function() {
     // Called when the subscription is ready for use on the server
   },
@@ -10,7 +10,9 @@ App.product = App.cable.subscriptions.create({channel: "ProductChannel"}, {
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
     $(".alert.alert-info").show();
+    $(".alert").delay(1200).fadeOut(1000);
     $('.product-reviews').prepend(data.comment);
+    $("#average-rating").attr('data-score', data.average_rating);
     refreshRating();
   },
 
@@ -19,8 +21,9 @@ App.product = App.cable.subscriptions.create({channel: "ProductChannel"}, {
       product_id: $("[data-product-id]").data("product-id")
     });
   }
+  
 });
 
 $(document).on('turbolinks:load', function() {
-	App.product.listen_to_comments();
+  App.product.listen_to_comments();
 });
